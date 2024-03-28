@@ -3,8 +3,7 @@ import './ExportDataButton.css';
 
 function ExportDataButton({ onClick }) {
   const handleClick = () => {
-    // Call the onClick function when the button is clicked
-    onClick();
+    onClick(); // Call the onClick function passed from the parent component
   };
 
   return (
