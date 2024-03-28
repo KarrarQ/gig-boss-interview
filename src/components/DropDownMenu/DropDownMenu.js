@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './DropDownMenu.css';
 
 function DropDownMenu({ onSelectBand, bandsData }) {
   const [selectedBand, setSelectedBand] = useState(''); // Initialize selectedBand state
