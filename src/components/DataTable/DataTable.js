@@ -1,13 +1,14 @@
 import React from 'react';
-import './DataTable.css' ;
+import './DataTable.css';
 
-function DataTable({ data }) {
+function DataTable({ data, selectedBand }) {
   return (
     <div className="data-table">
       <table>
         <thead>
           <tr>
-            <th>Band Name</th>
+            {/* Render band name only if a band is selected */}
+            {selectedBand && <th>Band Name</th>}
             <th>Musician</th>
             <th>Income</th>
           </tr>
@@ -15,7 +16,8 @@ function DataTable({ data }) {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.bandName}</td>
+              {/* Conditionally render band name based on selected band */}
+              {selectedBand && <td>{item.bandName}</td>}
               <td>{item.name}</td>
               <td>${item.income}</td>
             </tr>
