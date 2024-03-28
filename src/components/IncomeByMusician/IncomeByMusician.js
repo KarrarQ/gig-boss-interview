@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './IncomeByMusician.css';
-import data from '../SampleData/income_data_2023_24.json'; // Update the path to match your directory structure
 
 function IncomeByMusician({ selectedBand, bandsData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterOption, setFilterOption] = useState('');
 
-  // Filter the bandsData based on the selectedBand
+  // Find the selected band data
   const selectedBandData = bandsData.find(band => band.band_name === selectedBand);
 
   // Function to handle search query change
@@ -19,7 +18,7 @@ function IncomeByMusician({ selectedBand, bandsData }) {
     setFilterOption(event.target.value);
   };
 
-  // Function to filter band members based on search query and filter option
+  // Filter band members based on search query and filter option
   const filteredMembers = selectedBandData ? selectedBandData.members.filter(member => {
     const nameMatches = member.name.toLowerCase().includes(searchQuery.toLowerCase());
     const meetsFilterCriteria = !filterOption || (filterOption === 'over600' && member.income >= 600) || (filterOption === 'under600' && member.income < 600);
@@ -52,3 +51,4 @@ function IncomeByMusician({ selectedBand, bandsData }) {
 }
 
 export default IncomeByMusician;
+
