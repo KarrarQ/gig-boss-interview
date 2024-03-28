@@ -6,11 +6,13 @@ function TotalIncome({ bandsData, selectedBand }) {
 
   // Calculate total income for all bands
   useEffect(() => {
-    let total = 0;
-    bandsData.forEach(band => {
-      total += band.members.reduce((acc, member) => acc + member.income, 0);
-    });
-    setTotalIncome(total);
+    if (bandsData) {
+      let total = 0;
+      bandsData.forEach(band => {
+        total += band.members.reduce((acc, member) => acc + member.income, 0);
+      });
+      setTotalIncome(total);
+    }
   }, [bandsData]);
 
   // Update total income based on selected band
@@ -26,7 +28,7 @@ function TotalIncome({ bandsData, selectedBand }) {
 
   return (
     <div className="total-income">
-      <h2>Total Income for 2023-2024</h2>
+      <h2>Total Income for {selectedBand ? selectedBand : '2023-2024'}</h2>
       <p>${totalIncome}</p>
     </div>
   );
