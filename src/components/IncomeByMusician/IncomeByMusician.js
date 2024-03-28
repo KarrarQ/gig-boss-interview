@@ -1,42 +1,13 @@
 import React, { useState } from 'react';
 import './IncomeByMusician.css';
+import data from '../SampleData/income_data_2023_24.json'; // Update the path to match your directory structure
 
-function IncomeByMusician() {
+function IncomeByMusician({ selectedBand, bandsData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterOption, setFilterOption] = useState('');
 
-  // Sample data from the JSON file
-  const bandsData = {
-    "bands": [
-      {
-        "band_name": "Global Groove",
-        "members": [
-          { "name": "You", "income": 2600 },
-          { "name": "Carlos", "income": 2400 },
-          { "name": "Deepak", "income": 2700 },
-          { "name": "Elena", "income": 2500 }
-        ]
-      },
-      {
-        "band_name": "Harmony Fusion",
-        "members": [
-          { "name": "You", "income": 300 },
-          { "name": "Chen", "income": 150 },
-          { "name": "Yuki", "income": 200 },
-          { "name": "Oliver", "income": 100 }
-        ]
-      },
-      {
-        "band_name": "Melody Makers",
-        "members": [
-          { "name": "You", "income": 400 },
-          { "name": "Liam", "income": 500 },
-          { "name": "Aisha", "income": 600 },
-          { "name": "Raj", "income": 700 }
-        ]
-      }
-    ]
-  };
+  // Filter the bandsData based on the selectedBand
+  const selectedBandData = bandsData.find(band => band.band_name === selectedBand);
 
   // Function to handle search query change
   const handleSearchChange = (event) => {
@@ -49,16 +20,11 @@ function IncomeByMusician() {
   };
 
   // Function to filter band members based on search query and filter option
-  const filteredMembers = bandsData.bands.reduce((acc, band) => {
-    band.members.forEach(member => {
-      if (member.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-        if (!filterOption || (filterOption === 'over600' && member.income >= 600) || (filterOption === 'under600' && member.income < 600)) {
-          acc.push({ bandName: band.band_name, ...member });
-        }
-      }
-    });
-    return acc;
-  }, []);
+  const filteredMembers = selectedBandData ? selectedBandData.members.filter(member => {
+    const nameMatches = member.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const meetsFilterCriteria = !filterOption || (filterOption === 'over600' && member.income >= 600) || (filterOption === 'under600' && member.income < 600);
+    return nameMatches && meetsFilterCriteria;
+  }) : [];
 
   return (
     <div className="income-by-musician">
@@ -77,7 +43,7 @@ function IncomeByMusician() {
       <ul>
         {filteredMembers.map((member, index) => (
           <li key={index} style={{ backgroundColor: member.income >= 600 ? 'lightgreen' : 'inherit' }}>
-            Band: {member.bandName}, Musician: {member.name}, Income: ${member.income}
+            Band: {selectedBand}, Musician: {member.name}, Income: ${member.income}
           </li>
         ))}
       </ul>
@@ -86,4 +52,3 @@ function IncomeByMusician() {
 }
 
 export default IncomeByMusician;
-
