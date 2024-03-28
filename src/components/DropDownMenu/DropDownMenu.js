@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 
-function DropDownMenu() {
-  const [selectedBand, setSelectedBand] = useState(null);
-  
+function DropDownMenu({ onSelectBand, bandsData }) {
+  const [selectedBand, setSelectedBand] = useState(''); // Initialize selectedBand state
+
+  // Function to handle band change
   const handleBandChange = (event) => {
-    setSelectedBand(event.target.value);
+    const selectedBand = event.target.value;
+    setSelectedBand(selectedBand);
+    onSelectBand(selectedBand); // Pass the selected band to the parent component
   };
 
   return (
@@ -12,9 +15,9 @@ function DropDownMenu() {
       <label htmlFor="bands">Select a Band:</label>
       <select id="bands" value={selectedBand} onChange={handleBandChange}>
         <option value="">Select a band...</option>
-        <option value="band1">Band 1</option>
-        <option value="band2">Band 2</option>
-        {/* Add more options as needed */}
+        {bandsData.map((band, index) => (
+          <option key={index} value={band.band_name}>{band.band_name}</option>
+        ))}
       </select>
     </div>
   );
