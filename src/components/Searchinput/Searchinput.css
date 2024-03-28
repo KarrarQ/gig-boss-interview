@@ -1,0 +1,21 @@
+.search-input {
+    margin-bottom: 20px;
+  }
+  
+  .search-input input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .search-input input[type="text"]::placeholder {
+    color: #aaa;
+  }
+  
+  .search-input input[type="text"]:focus {
+    outline: none;
+    border-color: #0d47a1; /* Adjust color to match Gig Boss website */
+  }
+  

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Searchinput.css';
 
 function SearchInput({ value, onChange }) {
   const handleInputChange = (event) => {

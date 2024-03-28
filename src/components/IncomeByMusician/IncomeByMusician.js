@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './IncomeByMusician.css';
 
 function IncomeByMusician() {
   const [searchQuery, setSearchQuery] = useState('');

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './RenderArea.css'
 
 function RenderArea({ selectedBand, bandsData }) {
   const [bandIncome, setBandIncome] = useState(null); // State to store band income
