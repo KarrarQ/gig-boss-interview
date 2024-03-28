@@ -36,7 +36,7 @@ function IncomeByMusician({ selectedBand, bandsData }) {
       />
       <select value={filterOption} onChange={handleFilterChange}>
         <option value="">All</option>
-        <option value="over600">= $600</option>
+        <option value="over600"> >= $600</option>
         <option value="under600">{'< $600'}</option>
       </select>
       <ul>
