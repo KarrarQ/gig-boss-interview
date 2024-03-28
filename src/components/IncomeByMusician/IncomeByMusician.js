@@ -41,7 +41,7 @@ function IncomeByMusician({ selectedBand, bandsData }) {
       </select>
       <ul>
         {filteredMembers.map((member, index) => (
-          <li key={index} style={{ backgroundColor: member.income >= 600 ? 'lightgreen' : 'inherit' }}>
+          <li key={index} style={{ color: member.income >= 600 ? 'green' : 'inherit' }}>
             Band: {selectedBand}, Musician: {member.name}, Income: ${member.income}
           </li>
         ))}
