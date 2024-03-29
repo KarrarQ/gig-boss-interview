@@ -1,0 +1,27 @@
+.dropdown {
+    margin-bottom: 20px; 
+  }
+  
+  .dropdown label {
+    font-weight: bold;
+  }
+  
+  .dropdown select {
+    width: 200px; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown select:focus {
+    outline: none;
+  }
+
+  .dropdown select::-ms-expand {
+    display: none; 
+  }
+  
+  .dropdown select option {
+    background-color: #fff; 
+  }
+  

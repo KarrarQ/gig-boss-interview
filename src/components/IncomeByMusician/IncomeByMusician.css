@@ -1,0 +1,44 @@
+.income-by-musician {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .income-by-musician h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .income-by-musician input[type="text"],
+  .income-by-musician select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .income-by-musician ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .income-by-musician li {
+    margin-bottom: 10px;
+  }
+  .income-by-musician select option {
+    background-color: #fff;
+  }
+
+  .income-by-musician select option:checked {
+    background-color: #f0f0f0;
+  }
+
+  .income-by-musician li.over600 {
+    color: green;
+  }
+
+  .income-by-musician li.under600 {
+    color: red;
+  }
+  
