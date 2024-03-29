@@ -1,35 +1,27 @@
-  .dropdown {
-    position: relative;
-    margin-bottom: 20px;
+.dropdown {
+    margin-bottom: 20px; 
   }
   
   .dropdown label {
-    display: block;
     font-weight: bold;
-    margin-bottom: 5px;
   }
   
   .dropdown select {
-    width: calc(100% - 20px); 
-    padding: 8px;
-    font-size: 14px; 
+    width: 200px; 
+    padding: 8px; 
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #fff;
-    appearance: none; 
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
+  }
+  
+  .dropdown select:focus {
+    outline: none;
   }
 
-  .dropdown select::after {
-    content: "\25BC"; 
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
+  .dropdown select::-ms-expand {
+    display: none; 
   }
   
   .dropdown select option {
-    padding: 8px;
+    background-color: #fff; 
   }
   

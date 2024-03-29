@@ -1,20 +1,15 @@
 .total-income {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 16px;
+    margin-bottom: 20px; 
   }
   
   .total-income h2 {
-    font-size: 18px;
-    color: #343a40;
-    margin-bottom: 12px;
+    margin-top: 0;
+    font-size: 18px; 
   }
   
   .total-income p {
-    font-size: 24px;
+    font-size: 18px; 
     font-weight: bold;
-    color: #007bff;
-    margin: 0;
+    color: #2c3e50;
   }
   

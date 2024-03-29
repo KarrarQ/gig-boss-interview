@@ -28,7 +28,6 @@ function RenderArea({ selectedBand, bandsData }) {
       <h2>Income Information</h2>
       {selectedBand && bandsData ? (
         <div>
-          <p>Total Income for {selectedBand}:</p>
           <p>{bandIncome}</p>
           <p>Income of each band member:</p>
           <ul>

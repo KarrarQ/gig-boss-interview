@@ -26,7 +26,7 @@ function TotalIncome({ bandsData, selectedBand }) {
 
   return (
     <div className="total-income">
-      <h2>Total Income for {selectedBand ? selectedBand : '2023-2024'}</h2>
+      <h2>Total Income for {selectedBand ? selectedBand : '2023-2024:'}</h2>
       <p>${totalIncome}</p>
     </div>
   );
