@@ -13,7 +13,6 @@ import bandsData from '../SampleData/income_data_2023_24.json';
 
 function App() {
   const [selectedBand, setSelectedBand] = useState(null);
-  const [searchQuery, setSearchQuery] = useState(''); 
   const [showDataTable, setShowDataTable] = useState(false);
   const [exportData, setExportData] = useState(false);
   const [error, setError] = useState(null); 
@@ -46,18 +45,25 @@ function App() {
       <RenderArea selectedBand={selectedBand} bandsData={bandsData?.bands || []} />
       <IncomeByMusician selectedBand={selectedBand} bandsData={bandsData?.bands || []} />
       <ExportDataButton onExport={handleExportData} />
-      {showDataTable && <DataTable data={bandsData?.bands?.reduce((acc, band) => acc.concat(band.members.map(member => ({ bandName: band.band_name, ...member }))), []) || []} selectedBand={selectedBand} />}
-      {exportData && <AggregateData 
-        totalIncome={totalIncomeOver600 + totalIncomeUnder600} 
-        memberIncomes={memberIncomes} 
-        totalIncomeOver600={totalIncomeOver600} 
-        totalIncomeUnder600={totalIncomeUnder600} 
-        totalPaidOut={totalPaidOut} 
-        totalPersonalIncome={totalPersonalIncome} 
-      />}
+      <div className="data-and-aggregate-container">
+        <div className="data-container">
+          {showDataTable && <DataTable data={bandsData?.bands?.reduce((acc, band) => acc.concat(band.members.map(member => ({ bandName: band.band_name, ...member }))), []) || []} selectedBand={selectedBand} />}
+        </div>
+        <div className="aggregate-container">
+          {exportData && <AggregateData 
+            totalIncome={totalIncomeOver600 + totalIncomeUnder600} 
+            memberIncomes={memberIncomes} 
+            totalIncomeOver600={totalIncomeOver600} 
+            totalIncomeUnder600={totalIncomeUnder600} 
+            totalPaidOut={totalPaidOut} 
+            totalPersonalIncome={totalPersonalIncome} 
+          />}
+        </div>
+      </div>
       {error && <div className="error-message">Error: {error}</div>}
     </main>
   );
 }
 
 export default App;
+
