@@ -4,11 +4,12 @@
   
   .total-income h2 {
     margin-top: 0;
-    font-size: 18px; 
+    font-size: 20px; 
+    color: #2c3e50; 
   }
   
   .total-income p {
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: bold;
     color: #2c3e50;
   }

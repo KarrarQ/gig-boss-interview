@@ -10,6 +10,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
   }
   
   .export-data-button button:hover {

@@ -4,6 +4,7 @@
   
   .dropdown label {
     font-weight: bold;
+    color: #2c3e50;
   }
   
   .dropdown select {
@@ -16,12 +17,13 @@
   .dropdown select:focus {
     outline: none;
   }
-
+  
   .dropdown select::-ms-expand {
     display: none; 
   }
   
   .dropdown select option {
     background-color: #fff; 
+    color: #2c3e50; 
   }
   
