@@ -63,6 +63,14 @@ main {
   border-radius: 4px;
 }
 
+.data-container {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .data-table table {
   width: 100%;
   border-collapse: collapse;

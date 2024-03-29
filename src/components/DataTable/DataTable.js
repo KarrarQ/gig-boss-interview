@@ -1,11 +1,12 @@
 import React from 'react';
-import './DataTable.css';
+import './DataTable.css'; // Make sure this line is present
 import AggregateData from '../AggregateData/AggregateData';
 
 function DataTable({ data, selectedBand }) {
   return (
     <div className="data-table-container">
       <div className="data-table">
+      <h2>Aggregate Data</h2>
         <table>
           <thead>
             <tr>
