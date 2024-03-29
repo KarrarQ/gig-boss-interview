@@ -4,6 +4,7 @@ import './IncomeByMusician.css';
 function IncomeByMusician({ selectedBand, bandsData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterOption, setFilterOption] = useState('');
+  const [dropdownClicked, setDropdownClicked] = useState(false); // State to track if dropdown has been interacted with
 
   // Find the selected band data
   const selectedBandData = bandsData.find(band => band.band_name === selectedBand);
@@ -16,6 +17,7 @@ function IncomeByMusician({ selectedBand, bandsData }) {
   // Function to handle filter option change
   const handleFilterChange = (event) => {
     setFilterOption(event.target.value);
+    setDropdownClicked(true); // Set dropdownClicked to true when filter option changes
   };
 
   // Filter band members based on search query and filter option
@@ -41,7 +43,7 @@ function IncomeByMusician({ selectedBand, bandsData }) {
       </select>
       <ul>
         {filteredMembers.map((member, index) => (
-          <li key={index} style={{ color: member.income >= 600 ? 'green' : 'inherit' }}>
+          <li key={index} style={{ color: dropdownClicked && (member.income >= 600 ? 'green' : 'inherit') }}>
             Band: {selectedBand}, Musician: {member.name}, Income: ${member.income}
           </li>
         ))}
@@ -51,4 +53,3 @@ function IncomeByMusician({ selectedBand, bandsData }) {
 }
 
 export default IncomeByMusician;
-
