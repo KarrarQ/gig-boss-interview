@@ -1,5 +1,5 @@
 import React from 'react';
-import './DataTable.css'; // Make sure this line is present
+import './DataTable.css';
 import AggregateData from '../AggregateData/AggregateData';
 
 function DataTable({ data, selectedBand }) {
