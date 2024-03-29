@@ -1,0 +1,20 @@
+.aggregate-data {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .aggregate-data h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0d47a1;
+  }
+  
+  .aggregate-data p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  

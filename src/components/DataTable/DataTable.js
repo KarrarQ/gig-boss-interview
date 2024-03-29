@@ -1,5 +1,6 @@
 import React from 'react';
 import './DataTable.css';
+import AggregateData from '../AggregateData/AggregateData'; // Import the AggregateData component
 
 function DataTable({ data, selectedBand }) {
   return (
@@ -24,6 +25,8 @@ function DataTable({ data, selectedBand }) {
           ))}
         </tbody>
       </table>
+      {/* Conditionally render the AggregateData component */}
+      {selectedBand && <AggregateData data={data} />}
     </div>
   );
 }

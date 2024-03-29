@@ -1,9 +1,10 @@
+// ExportDataButton.js
 import React from 'react';
 import './ExportDataButton.css';
 
-function ExportDataButton({ onClick }) {
+function ExportDataButton({ onExport }) {
   const handleClick = () => {
-    onClick(); // Call the onClick function passed from the parent component
+    onExport(); // Call the onExport function passed from the parent component
   };
 
   return (
