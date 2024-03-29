@@ -7,19 +7,21 @@
 }
 
 .render-area h2 {
-  font-size: 18px; 
+  font-size: 24px; 
+  font-weight: bold; 
+  margin-bottom: 15px; 
 }
 
 .render-area p {
-  font-size: 14px;
+  font-size: 16px; 
   margin-bottom: 10px;
 }
 
 .render-area ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; 
+  padding: 0; 
 }
 
 .render-area li {
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
 }

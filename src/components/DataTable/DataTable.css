@@ -15,12 +15,13 @@
   .data-table th {
     background-color: #f2f2f2; 
     font-weight: bold; 
+    color: #2c3e50; 
   }
   
   .data-table tbody tr:nth-child(even) {
     background-color: #f2f2f2; 
   }
-
+  
   .aggregate-data {
     margin-top: 20px;
     border: 1px solid #ddd; 
@@ -30,9 +31,11 @@
   
   .aggregate-data h2 {
     margin-top: 0; 
+    color: #2c3e50;
   }
   
   .aggregate-data p {
     margin: 5px 0;
+    color: #34495e; 
   }
   
