@@ -9,6 +9,7 @@ function ExportDataButton({ onExport }) {
   return (
     <div className="export-data-button">
       <button onClick={handleClick}>Export Data</button>
+      <div className="empty-container"></div>
     </div>
   );
 }
