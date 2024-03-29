@@ -1,36 +1,20 @@
 .header {
     background-color: #0d47a1;
-    color: #fff;
     padding: 20px;
-    text-align: center;
   }
   
   .header h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    margin: 0;
   }
   
-  .header nav ul {
-    list-style: none;
-  }
-  
-  .header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .header nav ul li:last-child {
-    margin-right: 0;
-  }
-  
-  .header nav ul li a {
+  .header h1 a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
   }
   
-  .header nav ul li a:hover {
-    color: #ccc;
+  .header h1 a:hover {
+    color: #ff3d00; 
   }
   

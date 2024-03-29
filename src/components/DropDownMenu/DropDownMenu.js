@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import './DropDownMenu.css';
 
 function DropDownMenu({ onSelectBand, bandsData }) {
-  const [selectedBand, setSelectedBand] = useState(''); // Initialize selectedBand state
-
-  // Function to handle band change
+  
+  const [selectedBand, setSelectedBand] = useState(''); 
   const handleBandChange = (event) => {
     const selectedBand = event.target.value;
     setSelectedBand(selectedBand);
-    onSelectBand(selectedBand); // Pass the selected band to the parent component
+    onSelectBand(selectedBand);
   };
 
   return (

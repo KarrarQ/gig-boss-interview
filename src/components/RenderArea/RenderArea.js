@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './RenderArea.css'
 
 function RenderArea({ selectedBand, bandsData }) {
-  const [bandIncome, setBandIncome] = useState(null); // State to store band income
-  const [bandMembersIncome, setBandMembersIncome] = useState([]); // State to store band members' income
+  const [bandIncome, setBandIncome] = useState(null); 
+  const [bandMembersIncome, setBandMembersIncome] = useState([]);
 
-  // Function to update income data based on selected band
+
   const updateIncomeData = () => {
     if (selectedBand && bandsData) {
       const band = bandsData.find(band => band.band_name === selectedBand);
@@ -19,7 +19,6 @@ function RenderArea({ selectedBand, bandsData }) {
     }
   };
 
-  // Call updateIncomeData when selectedBand or bandsData changes
   useEffect(() => {
     updateIncomeData();
   }, [selectedBand, bandsData]);

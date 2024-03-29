@@ -4,11 +4,8 @@ import './Header.css';
 function Header() {
   return (
     <header className="header">
-      <h1>Gig Boss</h1>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-        </ul>
+      <h1><a href="/">Gig Boss</a></h1>
       </nav>
     </header>
   );

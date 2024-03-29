@@ -38,7 +38,7 @@
   }
   
   .income-by-musician li.income-over-600 {
-    color: green; /* Change text color for income over $600 */
+    color: green; 
   }
   
   .income-by-musician li:hover {

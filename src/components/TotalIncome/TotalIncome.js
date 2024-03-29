@@ -4,7 +4,6 @@ import './TotalIncome.css';
 function TotalIncome({ bandsData, selectedBand }) {
   const [totalIncome, setTotalIncome] = useState(0);
 
-  // Calculate total income for all bands
   useEffect(() => {
     if (bandsData) {
       let total = 0;
@@ -15,7 +14,6 @@ function TotalIncome({ bandsData, selectedBand }) {
     }
   }, [bandsData]);
 
-  // Update total income based on selected band
   useEffect(() => {
     if (selectedBand && bandsData) {
       const band = bandsData.find(band => band.band_name === selectedBand);

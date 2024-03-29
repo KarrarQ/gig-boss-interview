@@ -10,27 +10,25 @@
   }
   
   .dropdown select {
-    width: calc(100% - 20px); /* Adjust width as needed */
+    width: calc(100% - 20px); 
     padding: 8px;
-    font-size: 14px; /* Decrease font size for better fit */
+    font-size: 14px; 
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
-    appearance: none; /* Remove default styles for select */
-    -webkit-appearance: none; /* For older versions of Safari */
-    -moz-appearance: none; /* For older versions of Firefox */
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
   }
-  
-  /* Custom dropdown arrow */
+
   .dropdown select::after {
-    content: "\25BC"; /* Unicode character for down arrow */
+    content: "\25BC"; 
     position: absolute;
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
   }
   
-  /* Style options */
   .dropdown select option {
     padding: 8px;
   }

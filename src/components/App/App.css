@@ -1,18 +1,15 @@
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
   color: #333;
 }
 
-/* Header styles */
 .header {
   background-color: #0d47a1;
   padding: 20px;
@@ -24,12 +21,10 @@ body {
   color: #fff;
 }
 
-/* Main styles */
 main {
   padding: 20px;
 }
 
-/* Dropdown menu styles */
 .dropdown {
   margin-bottom: 20px;
 }
@@ -44,7 +39,6 @@ main {
   font-size: 16px;
 }
 
-/* Render area styles */
 .render-area {
   background-color: #fff;
   border-radius: 8px;
@@ -57,7 +51,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Search input styles */
 .search-input {
   margin-bottom: 20px;
 }
@@ -70,7 +63,6 @@ main {
   border-radius: 4px;
 }
 
-/* DataTable styles */
 .data-table table {
   width: 100%;
   border-collapse: collapse;

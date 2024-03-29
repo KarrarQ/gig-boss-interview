@@ -4,23 +4,19 @@ import './IncomeByMusician.css';
 function IncomeByMusician({ selectedBand, bandsData }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterOption, setFilterOption] = useState('');
-  const [dropdownClicked, setDropdownClicked] = useState(false); // State to track if dropdown has been interacted with
+  const [dropdownClicked, setDropdownClicked] = useState(false); 
 
-  // Find the selected band data
   const selectedBandData = bandsData.find(band => band.band_name === selectedBand);
 
-  // Function to handle search query change
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Function to handle filter option change
   const handleFilterChange = (event) => {
     setFilterOption(event.target.value);
-    setDropdownClicked(true); // Set dropdownClicked to true when filter option changes
+    setDropdownClicked(true); 
   };
 
-  // Filter band members based on search query and filter option
   const filteredMembers = selectedBandData ? selectedBandData.members.filter(member => {
     const nameMatches = member.name.toLowerCase().includes(searchQuery.toLowerCase());
     const meetsFilterCriteria = !filterOption || (filterOption === 'over600' && member.income >= 600) || (filterOption === 'under600' && member.income < 600);
